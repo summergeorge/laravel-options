@@ -8,7 +8,7 @@
 Global key-value store in the database
 
 ## Thank You
-(https://github.com/appstract/laravel-options)[https://github.com/appstract/laravel-options]
+[https://github.com/appstract/laravel-options](https://github.com/appstract/laravel-options)
 
 ## Installation
 
