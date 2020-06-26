@@ -1,8 +1,8 @@
 <?php
 
-namespace Appstract\Options\Console;
+namespace Summergeorge\Options\Console;
 
-use Appstract\Options\OptionFacade as Option;
+use Summergeorge\Options\OptionFacade as Option;
 use Illuminate\Console\Command;
 
 class OptionSetCommand extends Command

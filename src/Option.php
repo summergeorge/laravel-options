@@ -1,6 +1,6 @@
 <?php
 
-namespace Appstract\Options;
+namespace Summergeorge\Options;
 
 use Illuminate\Database\Eloquent\Model;
 

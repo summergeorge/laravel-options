@@ -29,12 +29,12 @@
             "src/helpers.php"
         ],
         "psr-4": {
-            "summergeorge\\Options\\": "src"
+            "Summergeorge\\Options\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "summergeorge\\Options\\Test\\": "tests"
+            "Summergeorge\\Options\\Test\\": "tests"
         }
     },
     "scripts": {
@@ -46,10 +46,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "summergeorge\\Options\\OptionsServiceProvider"
+                "Summergeorge\\Options\\OptionsServiceProvider"
             ],
             "aliases": {
-                "Option": "summergeorge\\Options\\OptionFacade"
+                "Option": "Summergeorge\\Options\\OptionFacade"
             }
         }
     }
