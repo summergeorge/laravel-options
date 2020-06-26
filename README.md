@@ -15,7 +15,7 @@ Global key-value store in the database
 To get started with laravel-options, use Composer to add the package to your project's dependencies:
 
 ```bash
-composer require summergeorge/laravel-options
+composer require summergeorge/laravel-options ^6.0
 ```
 
 ### Publish, migrate
