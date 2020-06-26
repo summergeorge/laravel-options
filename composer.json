@@ -1,11 +1,11 @@
 {
-    "name": "appstract/laravel-options",
+    "name": "summergeorge/laravel-options",
     "description": "Global options loaded from the database",
     "keywords": [
-        "appstract",
+        "summergeorge",
         "laravel-options"
     ],
-    "homepage": "https://github.com/appstract/laravel-options",
+    "homepage": "https://github.com/summergeorge/laravel-options",
     "license": "MIT",
     "authors": [
         {
@@ -29,12 +29,12 @@
             "src/helpers.php"
         ],
         "psr-4": {
-            "Appstract\\Options\\": "src"
+            "summergeorge\\Options\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Appstract\\Options\\Test\\": "tests"
+            "summergeorge\\Options\\Test\\": "tests"
         }
     },
     "scripts": {
@@ -46,10 +46,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Appstract\\Options\\OptionsServiceProvider"
+                "summergeorge\\Options\\OptionsServiceProvider"
             ],
             "aliases": {
-                "Option": "Appstract\\Options\\OptionFacade"
+                "Option": "summergeorge\\Options\\OptionFacade"
             }
         }
     }
