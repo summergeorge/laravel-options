@@ -15,6 +15,7 @@ class CreateOptionsTable extends Migration
     {
         Schema::create('options', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name')->nullable()->comment('配置项名称');
             $table->string('key')->unique();
             $table->json('value');
         });

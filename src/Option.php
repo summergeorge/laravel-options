@@ -28,6 +28,7 @@ class Option extends Model
      * @var [type]
      */
     protected $fillable = [
+        'name',
         'key',
         'value',
     ];
@@ -55,6 +56,8 @@ class Option extends Model
         if ($option = self::where('key', $key)->first()) {
             return $option->value;
         }
+        //如果数据库没有指，将默认值写入数据库
+        self::set($key,$default);
 
         return $default;
     }
