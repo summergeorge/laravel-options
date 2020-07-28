@@ -3,6 +3,7 @@
 namespace Summergeorge\Options;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 
 class Option extends Model
 {
@@ -53,9 +54,15 @@ class Option extends Model
      */
     public function get($key, $default = null)
     {
+        $cache_key = "laravel-option.".$key;
+        if(Cache::has($cache_key)){
+            return Cache::get($cache_key);
+        }
         if ($option = self::where('key', $key)->first()) {
+            Cache::put($cache_key,$option->value,3600);
             return $option->value;
         }
+
         //如果数据库没有指，将默认值写入数据库
         self::set($key,$default);
 
@@ -74,6 +81,7 @@ class Option extends Model
         $keys = is_array($key) ? $key : [$key => $value];
 
         foreach ($keys as $key => $value) {
+            Cache::forget( "laravel-option.".$key);
             self::updateOrCreate(['key' => $key], ['value' => $value]);
         }
 
