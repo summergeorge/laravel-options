@@ -64,7 +64,9 @@ class Option extends Model
         }
 
         //如果数据库没有指，将默认值写入数据库
-        self::set($key,$default);
+        if($default){
+            self::set($key,$default);
+        }
 
         return $default;
     }
