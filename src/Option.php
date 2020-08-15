@@ -20,7 +20,7 @@ class Option extends Model
      * @var array
      */
     protected $casts = [
-        'value' => 'json',
+        'value' => 'array',
     ];
 
     /**
